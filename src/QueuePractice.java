@@ -12,6 +12,7 @@ public class QueuePractice {
         System.out.println(queue.pop());
         System.out.println(queue.pop());
         System.out.println(queue.pop());
+        System.out.println(queue.pop());
     }
 }
 
