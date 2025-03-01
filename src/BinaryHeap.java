@@ -1,5 +1,3 @@
-package com.test.app;
-
 public class BinaryHeap {
     int[] arr = new int[9];
     int maxPosition = 0;

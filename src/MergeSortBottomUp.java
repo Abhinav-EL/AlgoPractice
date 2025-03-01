@@ -1,5 +1,3 @@
-package com.test.app;
-
 /**
  * A version of Mergesort, which is not recusrsive
  */

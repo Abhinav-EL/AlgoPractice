@@ -1,25 +1,23 @@
-package com.test.app;
-
 public class SortMain {
 
     public static void main(String[] args) {
-        /*
-        To test if the utility methods are working
+        
+        //To test if the utility methods are working
 
-        int[] arr = {1, 2};
+        int[] arr = {5, 2, 6, 1, 3, 4};
         printArray(arr);
         SortUtil.swap(arr, 0, 1);
-        printArray(arr);*/
+        printArray(arr);
 
-        /*System.out.println("*** Selection Sort ***");
+        System.out.println("*** Selection Sort ***");
         // 1. Initialize implementation
-        SelectionSort selectionSort = new SelectionSort();
+        SelectionSort selectionSort = new SelectionSort(arr);
         // 2. Print current array
         printArray(selectionSort.currentArray());
         // 3. Now actually sort
         selectionSort.sortArray();
         // 4. Print sorted array
-        printArray(selectionSort.currentArray());*/
+        printArray(selectionSort.currentArray());
 
         /*System.out.println("*** Insertion Sort ***");
         // 1. Initialize implementation
@@ -51,6 +49,7 @@ public class SortMain {
         // 4. Print sorted array
         testAssignment.printArray();*/
 
+        /*
         System.out.println("*** Merge Sort ***");
         // 1. Initialize implementation
         MergeSort mergeSort = new MergeSort();
@@ -59,7 +58,7 @@ public class SortMain {
         // 3. Now actually sort
         mergeSort.sortArray();
         // 4. Print sorted array
-        printArray(mergeSort.currentArray());
+        printArray(mergeSort.currentArray()); */
 
         /*System.out.println("*** MergeBU Sort ***");
         // 1. Initialize implementation

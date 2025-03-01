@@ -1,17 +1,14 @@
-package com.test.app;
 
 /**
  * Selection sort is the elementary sort where each element
  * is compared to current element and if found to
- * be smaller value, swapped
+ * be smaller value, swapped. Takes O(n^2) time.
  */
 public class SelectionSort {
-    int[] arr = new int[10];
+    int[] arr;
 
-    public SelectionSort(){
-        for(int i =0; i <arr.length; i++){
-            arr[i] = i* -1 ;
-        }
+    public SelectionSort(int[] arrToSort){
+        this.arr = arrToSort;
     }
 
     public int[] currentArray(){
@@ -20,17 +17,28 @@ public class SelectionSort {
 
     public int[] sortArray(){
         for (int i = 0; i< arr.length; i++){
-            // This cannot start from j=i, because say you have array
-            // with [0, 4 ,1]. This is already sorted if we only look
-            // at things to the right. Which is wrong, and hence
-            // we look at the entire array
-            for(int j=0; j< arr.length; j++){
-                if(SortUtil.smaller(arr[i],arr[j])){
-                    SortUtil.swap(arr, i, j);
+            int min = i;
+            for(int j=i+1; j< arr.length; j++){
+                if(arr[min] > arr[j]){
+                    min = j;
                 }
+            }
+            if(min != i) {
+                int temp = arr[i];
+                arr[i] = arr[min];
+                arr[min] = temp;
             }
         }
 
         return arr;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {5, 2, 6, 1, 3, 4};
+        SelectionSort selectionSort = new SelectionSort(arr);
+        selectionSort.sortArray();
+        for(int i=0; i<arr.length; i++){
+            System.out.print(arr[i] + " ");
+        }
     }
 }

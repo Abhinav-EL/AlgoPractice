@@ -1,4 +1,3 @@
-package com.test.app;
 
 /**
  * Divide and conquer philosophy -

@@ -1,6 +1,3 @@
-package com.test.app;
-
-
 /**
  * Insertion sort is the elementary sort where current element
  * is compared to previous element and if found to

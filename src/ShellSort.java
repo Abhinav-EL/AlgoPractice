@@ -1,11 +1,10 @@
-package com.test.app;
-
 /**
  * Shell sort is the elementary sort where current element<br>
  * is compared to previous element, similar to Insertion Sort.
  *<pr>
  * But instead of going back only by one single index, it goes back multiple.<br>
- * This means we scan the array multiple times, each time jumping back by different steps
+ * This means we scan the array multiple times, each time jumping back by different steps.
+ * h-sorting the array.
  */
 public class ShellSort {
     int[] arr = {10, 40, 50, 60, 30, 90, 70, 00 , 20, 80};

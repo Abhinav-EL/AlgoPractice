@@ -1,5 +1,3 @@
-package com.test.app;
-
 /**
  * Makes use of binary heap algorithm
  * - with NlogN “in place” sorting (no extra array)
