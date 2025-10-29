@@ -1,3 +1,16 @@
+/*
+ * Critical data structure for priority queue
+ * 1. Insert: Add the value at the end of array and then swim up according to violation check]
+ * 2. Delete: Swap the root with last value and sink the new root according to violation check
+ * 3. Swim: Traverse up the tree and swap the value with parent if it violates the heap property
+ * 4. Sink: Traverse down the tree and swap the value with child if it violates the heap property
+ * 5. Get: Binary search to get the value from the heap
+ * 
+ * Parent = k/2
+ * Child = 2k, 2k+1
+ * 
+ */
+
 public class BinaryHeap {
     int[] arr = new int[9];
     int maxPosition = 0;
