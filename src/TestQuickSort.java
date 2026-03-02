@@ -33,7 +33,9 @@ public class TestQuickSort {
             if(i>=j) break;
             int temp = arr[i];
             arr[i] = arr[j];
-            arr[j] = temp;            
+            arr[j] = temp;
+
+            
         }
         int temp = arr[j];
         arr[j] = arr[lo];
@@ -51,11 +53,11 @@ public class TestQuickSort {
             System.out.print(arr[i] + " ");
         }
 
-        System.out.print("Now part 2: ");
+        System.out.print("Now part 2 ");
     
         int[] arr2 = {5, 2, 6, 1, 3, 4};
         QuickSort realQuickSort = new QuickSort();
-        realQuickSort.sortArray(arr2);
+        realQuickSort.sortArray();
 
         for(int i=0; i<arr2.length; i++){
             System.out.print(arr2[i] + " ");
