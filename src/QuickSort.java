@@ -20,11 +20,15 @@ public class QuickSort {
     public int[] currentArray(){
         return arr;
     }
-
+    
     public int[] sortArray(){
-
         sort(arr, 0, arr.length-1);
         return arr;
+    }
+
+    public void sortArray(int[] sortArr){
+        this.arr = sortArr;
+        sort(arr, 0, arr.length-1);
     }
 
     private void sort(int[] a, int lo, int hi){
@@ -32,11 +36,11 @@ public class QuickSort {
 
         int j = partition(a, lo, hi);
         sort(a, lo, j-1);
-        sort(a,j +1, hi);
+        sort(a, j+1, hi);
     }
 
     /**
-     * Pay attention to the index increments and decrements
+     * Pay attention to the index increments and decrements.
      *
      * @param a
      * @param lo
@@ -44,6 +48,7 @@ public class QuickSort {
      * @return
      */
     private int partition(int[] a, int lo, int hi){
+        //lo is randomly used to be the item to compare against.
         int i = lo; // this is the left index moving towards right
         int j = hi+1; // this is the right index moving towards left
 
@@ -51,17 +56,22 @@ public class QuickSort {
             /*This loop creates the condition that elements to left of 'lo' are smaller
             and elements to the right of 'lo' are greater*/
 
-            while(SortUtil.smaller(a[++i], a[lo])) // find items on left to swap
+            while(SortUtil.smaller(a[++i], a[lo])) // find items on right to swap
                 if(i>=hi) break;
-            while(SortUtil.smaller(a[lo], a[--j])) // find items on right to swap
+            while(SortUtil.smaller(a[lo], a[--j])) // find items on left to swap
                 if(j<=lo) break;
 
             if(i>=j) break; // check of pointers cross
             SortUtil.swap(a, i , j); // swap
         }
 
-        // Done with partitioning, swap with partitioning element
-        // This is necessary as the sort method is going partition around j
+        /* Done with partitioning, swap with partitioning element
+         This is necessary as the sort method is going partition around j.
+         
+         Remember that lo was picked randomly to be the parition element and it was the 
+         first element. Swaping with 'j' just means that now that partition element is in the middle,
+         such that elements on the left of lo are smaller and elements right is larger than it.
+        */ 
         SortUtil.swap(a, lo ,j);
         return j;
     }
